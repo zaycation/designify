@@ -1,0 +1,57 @@
+$primary-color: #108dc7 !default;
+$secondary-color: #ef8e38 !default;
+
+a {
+  text-decoration: none !important;
+  color: #fff !important;
+}
+
+a:hover {
+  color: $primary-color !important;
+}
+
+.navbar__main {
+  background: $primary-color; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    $secondary-color,
+    $primary-color
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    $secondary-color,
+    $primary-color
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  width: 100%;
+}
+
+.collapseitem {
+  color: #fff !important;
+  background: #fff !important;
+}
+
+.navbar-btn:hover {
+  color: #fff !important;
+  background: $secondary-color !important;
+  border-radius: 3px;
+}
+
+.nav-titles {
+  color: #000 !important;
+}
+.navbar-titles {
+  font-size: smaller;
+  color: #654ea3 !important;
+}
+.drop-title {
+  font-size: smaller !important;
+}
+.navbar-titles:hover {
+  color: $primary-color !important;
+}
+
+/*
+.logo__text:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.075));
+}
+*/
