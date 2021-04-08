@@ -12,7 +12,8 @@ const Header = () => {
               <Bounce top cascade>
                 <div className="hdr-text">
                   <p className="text-white text-center">
-                    Affordable Websites for You
+                    Affordable Websites <strong>FOR YOU </strong>starting at{" "}
+                    <strong>$199</strong>
                   </p>
                   <h4 className="text-white text-center">
                     Open up your business to new possibilities

@@ -31,11 +31,16 @@ const HomeNavbar = () => {
               <Nav.Link href="#link">Pricing</Nav.Link>
             </Flip>
           </Nav>
-          <Flip top>
-            <Nav.Link className="navbar-btn" href="#link">
-              (773)-420-8593
-            </Nav.Link>
-          </Flip>
+          <Nav className="ml-auto">
+            <Flip top>
+              <Nav.Link
+                className="navbar-btn d-flex flex-row text-left"
+                href="#link"
+              >
+                (773)-420-8593
+              </Nav.Link>
+            </Flip>
+          </Nav>
         </Navbar.Collapse>
       </Navbar>
     </>

@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
-import CircleLoader from "react-spinners/CircleLoader";
-import { flash } from "react-animations";
+import SyncLoader from "react-spinners/SyncLoader";
+import { tada } from "react-animations";
 import styled, { keyframes } from "styled-components";
 
 import "../css/LoadingPage.css";
 
-const flipAnim = keyframes`${flash}`;
+const flipAnim = keyframes`${tada}`;
 
 const FlipDiv = styled.div`
-  animation: 2.5s ${flipAnim};
+  animation: 1.5s ${flipAnim};
 `;
 
 const Loader = () => {
@@ -18,23 +18,19 @@ const Loader = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 6000);
+    }, 3000);
   }, []);
 
   return (
     <div>
       {loading ? (
         <div className="loading-screen">
-          <CircleLoader size={50} color={"#fff"} loading={loading} />
+          <SyncLoader size={10} color={"#fff"} loading={loading} />
 
           <FlipDiv>
-            <h2 className="loading__text py-2">
-              Augury Salon
-            </h2>
+            <h2 className="loading__text py-3">Designify</h2>
             <br />
-            <h6 className="text-white">
-              IF NOBODY'S ASKING "WHO DOES YOUR HAIR?" COME SEE US.
-            </h6>
+            <h4 className="text-white">Connecting Customers to Your Brand</h4>
           </FlipDiv>
         </div>
       ) : (
