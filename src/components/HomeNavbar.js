@@ -1,7 +1,8 @@
 import React from "react";
 import Flip from "react-reveal/Flip";
 import { ImPaintFormat } from "react-icons/im";
-import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
+import { HashLink } from "react-router-hash-link";
 
 import "../css/Navbar.css";
 
@@ -12,7 +13,7 @@ const HomeNavbar = () => {
         <Flip top>
           <Navbar.Brand
             href="/"
-            className="logo__text text-white d-flex flex-row align-items-center justify-content-center "
+            className="logo__text text-white d-flex flex-row align-items-center justify-content-center"
             style={{ fontSize: "95%" }}
           >
             <ImPaintFormat className="mr-1 text-white" />
@@ -28,7 +29,10 @@ const HomeNavbar = () => {
             <Flip top>
               <Nav.Link href="#home">About</Nav.Link>
               <Nav.Link href="#link">Services</Nav.Link>
-              <Nav.Link href="#link">Pricing</Nav.Link>
+              <Nav.Link>
+                <HashLink to="/pricing">Pricing</HashLink>
+              </Nav.Link>
+              <Nav.Link href="#link">Examples</Nav.Link>
             </Flip>
           </Nav>
           <Nav className="ml-auto">

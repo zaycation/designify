@@ -25,9 +25,9 @@ const Loader = () => {
     <div>
       {loading ? (
         <div className="loading-screen">
-          <SyncLoader size={10} color={"#fff"} loading={loading} />
-
           <FlipDiv>
+            <SyncLoader size={10} color={"#fff"} loading={loading} />
+
             <h2 className="loading__text py-3">Designify</h2>
             <br />
             <h4 className="text-white">Connecting Customers to Your Brand</h4>

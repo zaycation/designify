@@ -6,10 +6,6 @@ a {
   color: #fff !important;
 }
 
-a:hover {
-  color: $primary-color !important;
-}
-
 .navbar__main {
   background: $primary-color; /* fallback for old browsers */
   background: -webkit-linear-gradient(

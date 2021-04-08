@@ -1,0 +1,15 @@
+$primary-color: #108dc7 !default;
+$secondary-color: #ef8e38 !default;
+
+.price-bdr {
+  box-sizing: content-box;
+  border-width: 5px;
+  border-style: outset;
+  border-image: linear-gradient(
+    to left top,
+    $secondary-color,
+    $primary-color
+  );
+  border-image-slice: 1;
+  padding: 3rem;
+}

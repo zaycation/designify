@@ -7,7 +7,6 @@ import {
   AiOutlineMail,
   AiOutlineFacebook,
   AiOutlineInstagram,
-  AiOutlineTwitter,
   AiOutlineEnvironment,
   AiOutlinePhone,
 } from "react-icons/ai";
@@ -23,7 +22,7 @@ const Footer = () => {
                 <h2>
                   Designify
                   <ImPaintFormat
-                    className="mr-1"
+                    className="ml-2"
                     style={{ color: "#108dc7" }}
                   />
                 </h2>
@@ -38,10 +37,10 @@ const Footer = () => {
             <Slide left>
               <div className="text-xl-center text-lg-center text-md-center text-sm-left text-xs-left">
                 <h4>Navigation</h4>
-                <p>Home</p>
                 <p>About</p>
                 <p>Services</p>
                 <p>Pricing</p>
+                <p>Examples</p>
               </div>
             </Slide>
           </Col>

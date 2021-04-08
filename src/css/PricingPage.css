@@ -1,0 +1,12 @@
+.price-bdr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  border-width: 5px;
+  border-style: outset;
+  -o-border-image: linear-gradient(to left top, #ef8e38, #108dc7);
+     border-image: -webkit-gradient(linear, right bottom, left top, from(#ef8e38), to(#108dc7));
+     border-image: linear-gradient(to left top, #ef8e38, #108dc7);
+  border-image-slice: 1;
+  padding: 3rem;
+}
+/*# sourceMappingURL=PricingPage.css.map */
