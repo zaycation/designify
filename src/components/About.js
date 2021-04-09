@@ -92,7 +92,7 @@ const About = () => {
           >
             <Slide left>
               <div className="text-center">
-                <FcVoicePresentation size={56} />
+                <FcVoicePresentation size={45} />
               </div>
               <p>
                 When you work with us, you get one on one experience with a
@@ -129,7 +129,7 @@ const About = () => {
           >
             <Slide right>
               <div className="text-center">
-                <FcBullish size={56} />
+                <FcBullish size={45} />
               </div>
               <p>
                 Stop missing out on thousands of potential clients. Improve your

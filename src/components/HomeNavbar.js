@@ -28,11 +28,15 @@ const HomeNavbar = () => {
           <Nav className="mr-auto">
             <Flip top>
               <Nav.Link href="#home">About</Nav.Link>
-              <Nav.Link href="#link">Services</Nav.Link>
+              <Nav.Link>
+                <HashLink to="/services">Services</HashLink>
+              </Nav.Link>
               <Nav.Link>
                 <HashLink to="/pricing">Pricing</HashLink>
               </Nav.Link>
-              <Nav.Link href="#link">Examples</Nav.Link>
+              <Nav.Link>
+                <HashLink to="/examples">Our Work</HashLink>
+              </Nav.Link>
             </Flip>
           </Nav>
           <Nav className="ml-auto">

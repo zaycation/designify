@@ -3,10 +3,6 @@ a {
   color: #fff !important;
 }
 
-a:hover {
-  color: #108dc7 !important;
-}
-
 .navbar__main {
   background: #108dc7;
   /* fallback for old browsers */
