@@ -1,5 +1,6 @@
 import React from "react";
 import Bounce from "react-reveal/Bounce";
+import { HashLink } from "react-router-hash-link";
 import { Container, Row, Col, Button } from "react-bootstrap";
 
 const Header = () => {
@@ -21,11 +22,13 @@ const Header = () => {
                   <hr className="divider my-4" />
                   <div className="text-center">
                     <Button className="hdr-btns" variant="outline-light">
-                      Call Us Now
+                      Get Started
                     </Button>{" "}
-                    <Button className="hdr-btns" variant="outline-light">
-                      Learn More
-                    </Button>{" "}
+                    <HashLink to="/services">
+                      <Button className="hdr-btns" variant="outline-light">
+                        Learn More
+                      </Button>{" "}
+                    </HashLink>
                   </div>
                 </div>
               </Bounce>

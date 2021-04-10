@@ -27,7 +27,7 @@ const HomeNavbar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Flip top>
-              <Nav.Link href="#home">About</Nav.Link>
+              <Nav.Link href="/home">About</Nav.Link>
               <Nav.Link>
                 <HashLink to="/services">Services</HashLink>
               </Nav.Link>
