@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Swal from "sweetalert2";
 import {
   Container,
   Row,
@@ -8,28 +7,39 @@ import {
   Button,
   ProgressBar,
 } from "react-bootstrap";
+import Swal from "sweetalert2";
 import emailjs from "emailjs-com";
+import Checkbox from "@material-ui/core/Checkbox";
+import { withStyles } from "@material-ui/core/styles";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
 
-import HomeNavbar from "../components/HomeNavbar";
 import Footer from "../components/Footer";
+import HomeNavbar from "../components/HomeNavbar";
+import FloatingBtn from "../components/FloatingBtn";
 
 import "../css/MultiStep.css";
 
 const MultiStep = () => {
-  // eslint-disable-next-line no-unused-vars
-
   const [count, setCount] = useState(1);
-  //const [validated, setValidated] = useState(false);
   const [form, setForm] = useState({
     name: "",
     email: "",
-    phoneNum: "",
-    bizName: "",
     typeBiz: "",
-    bizPhone: "",
     bizSite: "",
+    bizName: "",
     referral: "",
+    phoneNum: "",
+    seo: false,
+    webDesign: true,
+    eCommerce: false,
+    logoDesign: false,
+    brandDevelopment: false,
+    contentDevelopment: false,
   });
+
+  const handleCheck = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.checked });
+  };
 
   const updateForm = (e) => {
     setForm({
@@ -38,12 +48,21 @@ const MultiStep = () => {
     });
   };
 
-  const submitForm = () => {
-    console.log(form);
+  const OrangeCheck = withStyles({
+    root: {
+      color: "#ef8e38",
+      "&$checked": {
+        color: "#ef8e38",
+      },
+    },
+    checked: {},
+  })((props) => <Checkbox color="default" {...props} />);
+
+  const submitForm = (e) => {
     const swalWithBootstrapButtons = Swal.mixin({
       customClass: {
-        confirmButton: "btn btn-success",
-        denyButton: "btn btn-danger",
+        confirmButton: "btn btn-dark",
+        denyButton: "btn-dark ",
       },
       buttonsStyling: false,
     });
@@ -51,17 +70,17 @@ const MultiStep = () => {
     swalWithBootstrapButtons
       .fire({
         title: `Thanks, ${form.name}!`,
-        text: `We've received your request and will follow up with you shortly via a phone call.`,
+        text: `We will provide you with a phone call or email within 24 hours.`,
         icon: "success",
         confirmButtonText: `Close`,
+        confirmButtonColor: `#ef8e38`,
       })
       .then((result) => {
-        if (result.isConfirmed) {
+        if (result.isConfirmed || result.isDenied || result.isDismissed) {
           window.open("/", "_self");
         }
       });
 
-    /*
     var templateParams = {
       message: JSON.stringify(form),
     };
@@ -71,17 +90,16 @@ const MultiStep = () => {
         "service_r0ilvpo",
         "template_vk1p6im",
         templateParams,
-        "user_h2oSDkzclTQzPqQoJ4mzeƒ"
+        "user_h2oSDkzclTQzPqQoJ4mze"
       )
       .then(
-        function (response) {
-          console.log("SUCCESS!", response.status, response.text);
+        function (res) {
+          console.log("SUCCESS!", res.status, res.text);
         },
-        function (error) {
-          console.log("FAILED...", error);
+        function (err) {
+          console.log("FAILED...", err);
         }
       );
-    */
   };
 
   return (
@@ -93,13 +111,13 @@ const MultiStep = () => {
             <h2>Consultation Form</h2>
           </Col>
           <Col sm={12} md={12} lg={12}>
-            <Form noValidate onSubmit={submitForm} id="insform">
+            <Form id="insform" noValidate onSubmit={submitForm}>
               {count === 1 ? (
                 <>
                   <div>
                     <h6>Contact Information</h6>
                     <Form.Group>
-                      <Form.Label>Full Name</Form.Label>
+                      <Form.Label className="my-1">Full Name</Form.Label>
                       <Form.Control
                         required
                         type="text"
@@ -131,7 +149,9 @@ const MultiStep = () => {
                         placeholder="jstock123@email.com"
                       />
                       <Form.Text className="text-muted">
-                        We'll never share your email with anyone else.
+                        Here at Designify, we vow to never share your email with
+                        anyone else. We are not in the business of selling
+                        customer information - only websites!
                       </Form.Text>
                     </Form.Group>
                   </div>
@@ -142,7 +162,7 @@ const MultiStep = () => {
                   <div>
                     <h6>Business Information</h6>
                     <Form.Group>
-                      <Form.Label>Business Name</Form.Label>
+                      <Form.Label className="my-1">Business Name</Form.Label>
                       <Form.Control
                         required
                         type="text"
@@ -157,7 +177,6 @@ const MultiStep = () => {
                         Does your business have a current website?
                       </Form.Label>
                       <Form.Control
-                        required
                         type="text"
                         name="bizSite"
                         onChange={updateForm}
@@ -176,47 +195,70 @@ const MultiStep = () => {
                         placeholder="Financial Services, Hydroponics, Plumbing, etc."
                       />
                     </Form.Group>
-
-                    <Form.Group controlId="bizServices">
-                      <Form.Label>
-                        Which services are you interested in?
-                      </Form.Label>
-                      <Form.Check
-                        checked
-                        type="checkbox"
+                    <Form.Label>
+                      Which services are you interested in?
+                    </Form.Label>
+                    <Form.Group>
+                      <FormControlLabel
+                        control={
+                          <OrangeCheck
+                            checked={form.webDesign}
+                            onChange={handleCheck}
+                            name="webDesign"
+                          />
+                        }
                         label="Web Design & Development"
-                        onChange={updateForm}
-                        value={form.webDesign}
                       />
-                      <Form.Check
-                        type="checkbox"
+                      <FormControlLabel
+                        control={
+                          <OrangeCheck
+                            checked={form.eCommerce}
+                            onChange={handleCheck}
+                            name="eCommerce"
+                          />
+                        }
                         label="E-commerce"
-                        onChange={updateForm}
-                        value={form.eCommerce}
                       />
-                      <Form.Check
-                        type="checkbox"
+                      <FormControlLabel
+                        control={
+                          <OrangeCheck
+                            checked={form.brandDevelopment}
+                            onChange={handleCheck}
+                            name="brandDevelopment"
+                          />
+                        }
                         label="Brand Strategy & Development"
-                        onChange={updateForm}
-                        value={form.brandDevelopment}
                       />
-                      <Form.Check
-                        type="checkbox"
+
+                      <FormControlLabel
+                        control={
+                          <OrangeCheck
+                            checked={form.seo}
+                            onChange={handleCheck}
+                            name="seo"
+                          />
+                        }
                         label="(SEO) Search Engine Optimization"
-                        onChange={updateForm}
-                        value={form.seo}
                       />
-                      <Form.Check
-                        type="checkbox"
+                      <FormControlLabel
+                        control={
+                          <OrangeCheck
+                            checked={form.contentDevelopment}
+                            onChange={handleCheck}
+                            name="contentDevelopment"
+                          />
+                        }
                         label="Copywriting & Content Development"
-                        onChange={updateForm}
-                        value={form.contentDevelopment}
                       />
-                      <Form.Check
-                        type="checkbox"
+                      <FormControlLabel
+                        control={
+                          <OrangeCheck
+                            checked={form.logoDesign}
+                            onChange={handleCheck}
+                            name="logoDesign"
+                          />
+                        }
                         label="Logo Design"
-                        onChange={updateForm}
-                        value={form.logoDesign}
                       />
                     </Form.Group>
                   </div>
@@ -289,10 +331,10 @@ const MultiStep = () => {
               <>
                 <div className="text-center py-3">
                   <Button
-                    variant="success"
+                    variant="dark"
                     type="submit"
                     onClick={submitForm}
-                    className="my-1"
+                    className="services-btns my-1"
                   >
                     Submit Form
                   </Button>
@@ -303,6 +345,7 @@ const MultiStep = () => {
         </Row>
       </Container>
       <Footer />
+      <FloatingBtn />
     </>
   );
 };

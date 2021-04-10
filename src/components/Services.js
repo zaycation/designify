@@ -25,7 +25,7 @@ const Services = () => {
                   Get Started
                 </Button>
               </HashLink>
-              <HashLink to="/form">
+              <HashLink to="/pricing">
                 <Button className="services-btns" variant="outline-dark">
                   View Pricing
                 </Button>

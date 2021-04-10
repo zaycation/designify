@@ -25,18 +25,18 @@ const HomeNavbar = () => {
           <Nav className="mr-auto">
             <Flip top>
               <Nav.Link>
-                <HashLink smooth to="/home#why">
+                <HashLink className="navhas" smooth to="/home#why">
                   Why
                 </HashLink>
               </Nav.Link>
               <Nav.Link>
-                <HashLink to="/services">Services</HashLink>
+                <HashLink className="navhas" to="/services">Services</HashLink>
               </Nav.Link>
               <Nav.Link>
-                <HashLink to="/pricing">Pricing</HashLink>
+                <HashLink className="navhas" to="/pricing">Pricing</HashLink>
               </Nav.Link>
               <Nav.Link>
-                <HashLink to="/examples">Our Work</HashLink>
+                <HashLink className="navhas" to="/examples">Our Work</HashLink>
               </Nav.Link>
             </Flip>
           </Nav>

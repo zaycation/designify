@@ -1,8 +1,3 @@
-a {
-  text-decoration: none !important;
-  color: #fff !important;
-}
-
 .navbar__main {
   background: #108dc7;
   /* fallback for old browsers */
@@ -11,6 +6,9 @@ a {
   background: linear-gradient(to right, #ef8e38, #108dc7);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   width: 100%;
+}
+
+.navbar-btn {
   color: #fff !important;
 }
 
@@ -35,6 +33,14 @@ a {
 
 .navbar-titles:hover {
   color: #108dc7 !important;
+}
+
+.navhas {
+  color: #fff;
+}
+
+.navhas:hover {
+  color: #108dc7;
 }
 
 /*

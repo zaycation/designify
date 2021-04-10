@@ -19,7 +19,7 @@ const Pricing = () => {
                 <li>Less than 4 weeks development time</li>
                 <li>
                   Long term help and assistance with updates and how to host/buy
-                  domains
+                  domains*
                 </li>
               </ul>
               <HashLink to="/form">
@@ -47,7 +47,7 @@ const Pricing = () => {
                 <li>Less than 3 month development time</li>
                 <li>
                   Long term help and assistance with updates and how to host/buy
-                  domains
+                  domains*
                 </li>
               </ul>
               <HashLink to="/form">
@@ -78,7 +78,7 @@ const Pricing = () => {
                 </li>
                 <li>
                   Long term help and assistance with updates and how to host/buy
-                  domains
+                  domains*
                 </li>
               </ul>
               <HashLink to="/form">
@@ -93,6 +93,20 @@ const Pricing = () => {
                 </Button>
               </HashLink>
             </div>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <footer className="page-footer font-small text-center px-3 py-3">
+              * Long term consulting and general maintenance will be provided.
+              This means that if there is a breaking update to any tech,
+              Designify will update and fix it for free. Please note that any
+              additional updates, new features, etc. can be provided at an
+              additional charge. The prices above are general pricing guidelines
+              based on what is included within the description. If addiitonal
+              services are required, there will be an additional corresponding
+              charge reflected on your invoice.
+            </footer>
           </Col>
         </Row>
       </Container>
