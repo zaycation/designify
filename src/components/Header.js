@@ -21,9 +21,11 @@ const Header = () => {
                   </h4>
                   <hr className="divider my-4" />
                   <div className="text-center">
+                    <HashLink to="/form">
                     <Button className="hdr-btns" variant="outline-light">
                       Get Started
                     </Button>{" "}
+                    </HashLink>
                     <HashLink to="/services">
                       <Button className="hdr-btns" variant="outline-light">
                         Learn More

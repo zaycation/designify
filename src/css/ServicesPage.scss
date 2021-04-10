@@ -1,0 +1,14 @@
+$primary-color: #108dc7 !default;
+$secondary-color: #ef8e38 !default;
+
+.services-btns {
+  color: #fff !important;
+  background: $secondary-color; /* fallback for old browsers */
+  border: 1px solid rgb(231, 231, 231);
+}
+
+.services-btns:hover {
+  color: #fff !important;
+  background: $primary-color; /* fallback for old browsers */
+  border: 1px solid rgb(231, 231, 231);
+}

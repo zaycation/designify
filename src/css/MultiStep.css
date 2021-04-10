@@ -1,0 +1,45 @@
+.top-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.card-pop {
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+  -webkit-transition: -webkit-transform 100ms ease-in;
+  transition: -webkit-transform 100ms ease-in;
+  transition: transform 100ms ease-in;
+  transition: transform 100ms ease-in, -webkit-transform 100ms ease-in;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.card-pop:hover {
+  -webkit-transform: scale(1.015);
+          transform: scale(1.015);
+  background: #78cffd !important;
+}
+
+.card-pop:hover Card.Title {
+  text-decoration: underline;
+}
+
+.prog-bar {
+  background: #108dc7;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#ef8e38), to(#108dc7));
+  background: linear-gradient(to right, #ef8e38, #108dc7);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/*# sourceMappingURL=MultiStep.css.map */

@@ -1,0 +1,39 @@
+$primary-color: #108dc7 !default;
+$secondary-color: #ef8e38 !default;
+
+.top-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.card-pop {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+  transition: transform 100ms ease-in;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.card-pop:hover {
+  transform: scale(1.015);
+  background: #78cffd !important;
+  Card.Title {
+    text-decoration: underline;
+  }
+}
+
+.prog-bar {
+  background: $primary-color; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    $secondary-color,
+    $primary-color
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    $secondary-color,
+    $primary-color
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

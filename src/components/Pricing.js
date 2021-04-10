@@ -1,4 +1,5 @@
 import React from "react";
+import { HashLink } from "react-router-hash-link";
 import { Container, Row, Col, Button } from "react-bootstrap";
 
 const Pricing = () => {
@@ -21,10 +22,17 @@ const Pricing = () => {
                   domains
                 </li>
               </ul>
-              <Button block variant="outline-dark">
-                Get Started
-              </Button>
-              <Button block variant="dark">View Examples</Button>
+              <HashLink to="/form">
+                <Button block variant="outline-dark">
+                  Get Started
+                </Button>
+              </HashLink>
+              <br />
+              <HashLink to="/examples">
+                <Button block variant="dark">
+                  View Examples
+                </Button>
+              </HashLink>
             </div>
           </Col>
           <Col xs={12} sm={12} md={4} lg={4} xl={4}>
@@ -42,10 +50,17 @@ const Pricing = () => {
                   domains
                 </li>
               </ul>
-              <Button block variant="outline-dark">
-                Get Started
-              </Button>
-              <Button block variant="dark">View Examples</Button>
+              <HashLink to="/form">
+                <Button block variant="outline-dark">
+                  Get Started
+                </Button>
+              </HashLink>
+              <br />
+              <HashLink to="/examples">
+                <Button block variant="dark">
+                  View Examples
+                </Button>
+              </HashLink>
             </div>
           </Col>
           <Col xs={12} sm={12} md={4} lg={4} xl={4}>
@@ -66,10 +81,17 @@ const Pricing = () => {
                   domains
                 </li>
               </ul>
-              <Button block variant="outline-dark">
-                Get Started
-              </Button>
-              <Button block variant="dark">View Examples</Button>
+              <HashLink to="/form">
+                <Button block variant="outline-dark">
+                  Get Started
+                </Button>
+              </HashLink>
+              <br />
+              <HashLink to="/examples">
+                <Button block variant="dark">
+                  View Examples
+                </Button>
+              </HashLink>
             </div>
           </Col>
         </Row>

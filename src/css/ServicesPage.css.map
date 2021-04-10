@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,cAAc,CAAC;EACb,KAAK,EAAE,eAAe;EACtB,UAAU,EAJM,OAAO;EAIO,+BAA+B;EAC7D,MAAM,EAAE,GAAG,CAAC,KAAK,CAAC,OAAkB;CACrC;;AAED,AAAA,cAAc,AAAA,MAAM,CAAC;EACnB,KAAK,EAAE,eAAe;EACtB,UAAU,EAXI,OAAO;EAWO,+BAA+B;EAC3D,MAAM,EAAE,GAAG,CAAC,KAAK,CAAC,OAAkB;CACrC",
+    "sources": [
+        "ServicesPage.scss"
+    ],
+    "names": [],
+    "file": "ServicesPage.css"
+}

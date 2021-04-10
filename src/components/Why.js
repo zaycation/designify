@@ -6,7 +6,7 @@ import { FcSearch, FcBearish, FcMultipleDevices } from "react-icons/fc";
 const Why = () => {
   return (
     <>
-      <Container className="text-center">
+      <Container className="text-center" id="why">
         <Row>
           <Col>
             <Slide top>

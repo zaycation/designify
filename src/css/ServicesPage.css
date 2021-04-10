@@ -1,0 +1,14 @@
+.services-btns {
+  color: #fff !important;
+  background: #ef8e38;
+  /* fallback for old browsers */
+  border: 1px solid #e7e7e7;
+}
+
+.services-btns:hover {
+  color: #fff !important;
+  background: #108dc7;
+  /* fallback for old browsers */
+  border: 1px solid #e7e7e7;
+}
+/*# sourceMappingURL=ServicesPage.css.map */

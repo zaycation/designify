@@ -9,7 +9,7 @@ import "../css/Navbar.css";
 const HomeNavbar = () => {
   return (
     <>
-      <Navbar bg="light" expand="lg" className="navbar__main">
+      <Navbar bg="dark" expand="sm" className="navbar__main" variant="dark">
         <Flip top>
           <Navbar.Brand
             href="/"
@@ -20,14 +20,15 @@ const HomeNavbar = () => {
             Designify
           </Navbar.Brand>
         </Flip>
-        <Navbar.Toggle
-          aria-controls="basic-navbar-nav"
-          className="collapseitem"
-        />
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Flip top>
-              <Nav.Link href="/home">About</Nav.Link>
+              <Nav.Link>
+                <HashLink smooth to="/home#why">
+                  Why
+                </HashLink>
+              </Nav.Link>
               <Nav.Link>
                 <HashLink to="/services">Services</HashLink>
               </Nav.Link>
@@ -44,6 +45,7 @@ const HomeNavbar = () => {
               <Nav.Link
                 className="navbar-btn d-flex flex-row text-left"
                 href="#link"
+                onClick={() => window.open("tel:773-420-8593", "_blank")}
               >
                 (773)-420-8593
               </Nav.Link>

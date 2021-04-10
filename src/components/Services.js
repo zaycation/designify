@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { HashLink } from "react-router-hash-link";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import {
   FcCollaboration,
   FcMultipleDevices,
@@ -17,6 +18,18 @@ const Services = () => {
           <Col>
             <div className="my-5 text-center">
               <h2 className="bold-txt">Services We Provide</h2>
+            </div>
+            <div className="my-5 text-center">
+              <HashLink className="mr-5" to="/form">
+                <Button className="services-btns" variant="outline-dark">
+                  Get Started
+                </Button>
+              </HashLink>
+              <HashLink to="/form">
+                <Button className="services-btns" variant="outline-dark">
+                  View Pricing
+                </Button>
+              </HashLink>
             </div>
           </Col>
         </Row>
