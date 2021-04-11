@@ -111,7 +111,12 @@ const MultiStep = () => {
             <h2>Consultation Form</h2>
           </Col>
           <Col sm={12} md={12} lg={12}>
-            <Form id="insform" noValidate onSubmit={submitForm}>
+            <Form
+              id="insform"
+              noValidate
+              data-netlify="true"
+              onSubmit={submitForm}
+            >
               {count === 1 ? (
                 <>
                   <div>
