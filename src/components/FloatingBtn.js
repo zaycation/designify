@@ -35,7 +35,7 @@ export default class FloatingBtn extends Component {
           icon={<DialpadIcon style={{ fontSize: 20, color: "#ef8e38" }} />}
           size={40}
           data-tip="Give us a ring"
-          onClick={() => window.open("tel:773-420-8593", "_blank")}
+          onClick={() => window.open("tel:661-536-5360", "_blank")}
         />
         <ChildButton
           icon={
@@ -48,9 +48,7 @@ export default class FloatingBtn extends Component {
           }
           size={40}
           data-tip="Shoot us an email"
-          onClick={() =>
-            window.open("mailto:isaiahthomas098@gmail.com", "_blank")
-          }
+          onClick={() => window.open("mailto:support@designify.io", "_blank")}
         />
         <ReactTooltip />
       </FloatingMenu>

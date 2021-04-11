@@ -30,13 +30,19 @@ const HomeNavbar = () => {
                 </HashLink>
               </Nav.Link>
               <Nav.Link>
-                <HashLink className="navhas" to="/services">Services</HashLink>
+                <HashLink className="navhas" to="/services">
+                  Services
+                </HashLink>
               </Nav.Link>
               <Nav.Link>
-                <HashLink className="navhas" to="/pricing">Pricing</HashLink>
+                <HashLink className="navhas" to="/pricing">
+                  Pricing
+                </HashLink>
               </Nav.Link>
               <Nav.Link>
-                <HashLink className="navhas" to="/examples">Our Work</HashLink>
+                <HashLink className="navhas" to="/examples">
+                  Our Work
+                </HashLink>
               </Nav.Link>
             </Flip>
           </Nav>
@@ -44,10 +50,9 @@ const HomeNavbar = () => {
             <Flip top>
               <Nav.Link
                 className="navbar-btn d-flex flex-row text-left"
-                href="#link"
-                onClick={() => window.open("tel:773-420-8593", "_blank")}
+                onClick={() => window.open("tel:661-536-5360", "_blank")}
               >
-                (773)-420-8593
+                (661)-536-5360
               </Nav.Link>
             </Flip>
           </Nav>

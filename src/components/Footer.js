@@ -69,10 +69,10 @@ const Footer = () => {
               <h4>Get in Touch</h4>
               <p
                 style={{ cursor: "grab" }}
-                onClick={() => window.open("tel:773-420-8593", "_blank")}
+                onClick={() => window.open("tel:661-536-5360", "_blank")}
               >
                 <AiOutlinePhone className="mr-2" />
-                +1 (773)-420-8593
+                +1 (661)-536-5360
               </p>
               <p>
                 <AiOutlineEnvironment className="mr-2" />
@@ -82,11 +82,11 @@ const Footer = () => {
                 className="text-wrap"
                 style={{ cursor: "grab" }}
                 onClick={() =>
-                  window.open("mailto:isaiahthomas098@gmail.com", "_blank")
+                  window.open("mailto:support@designify.io", "_blank")
                 }
               >
                 <AiOutlineMail className="mr-2" />
-                isaiahthomas098@gmail.com
+                support@designify.io
               </p>
             </Slide>
           </Col>
