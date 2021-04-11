@@ -103,9 +103,8 @@ const Pricing = () => {
               Designify will update and fix it for free. Please note that any
               additional updates, new features, etc. can be provided at an
               additional charge. The prices above are general pricing guidelines
-              based on what is included within the description. If addiitonal
-              services are required, there will be an additional corresponding
-              charge reflected on your invoice.
+              based on what is included within the description. Additional
+              services will require an additional corresponding charge
             </footer>
           </Col>
         </Row>
