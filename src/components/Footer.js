@@ -5,6 +5,7 @@ import {
   AiOutlinePhone,
 } from "react-icons/ai";
 import Zoom from "react-reveal/Zoom";
+import Flip from "react-reveal/Flip";
 import Slide from "react-reveal/Slide";
 import { ImPaintFormat } from "react-icons/im";
 import { HashLink } from "react-router-hash-link";
@@ -91,10 +92,12 @@ const Footer = () => {
             </Slide>
           </Col>
           <Col xs={12} sm={12} md={12} lg={12} xl={12}>
-            <footer className="my-2 text-xl-center text-lg-center text-md-center text-sm-left text-xs-left">
-              Please give us a call or shoot us over an email to inquire about
-              any of our programs!
-            </footer>
+            <Flip top>
+              <footer className="my-2 text-xl-center text-lg-center text-md-center text-sm-left text-xs-left">
+                Please give us a call or shoot us over an email to inquire about
+                any of our programs!
+              </footer>
+            </Flip>
           </Col>
         </Row>
         <hr />

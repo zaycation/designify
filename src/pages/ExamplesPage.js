@@ -1,7 +1,7 @@
 import React from "react";
 
 import HomeNavbar from "../components/HomeNavbar";
-import Projects from "../components/Projects";
+import Projects from "../components/Projects2";
 import Footer from "../components/Footer";
 import FloatingBtn from "../components/FloatingBtn";
 
