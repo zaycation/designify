@@ -5,7 +5,7 @@ import Loader from "./pages/LoadingPage";
 import PricingPage from "./pages/PricingPage";
 import ServicesPage from "./pages/ServicesPage";
 import ExamplesPage from "./pages/ExamplesPage";
-import Form from "./components/MultiStep";
+import Calendly from "./components/Calendly";
 
 import "./App.css";
 
@@ -18,7 +18,7 @@ function App() {
         <Route path="/loan-options" component={Options} />
         <Route path="/about" component={About} />
          */}
-        <Route path="/form" component={Form} />
+        <Route path="/form" component={Calendly} />
         <Route path="/examples" component={ExamplesPage} />
         <Route path="/services" component={ServicesPage} />
         <Route path="/pricing" component={PricingPage} />
